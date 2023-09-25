@@ -3,15 +3,26 @@
 // division och multiplikation
 class Calculator {
     add(x,y) {
-        return x + y;
+        if(typeof x === 'string' || typeof y === 'string') {
+            return 'invalid char';
+        } else {
+            return x + y;
+        };    
     };
 
     sub(x,y) {
-        return x - y;
+        if(typeof x === 'string' || typeof y === 'string') {
+            return 'invalid char';
+        } else {
+            return x - y;
+        };    
     };
 
     div(x,y) {
-        if(y===0) {
+        if(typeof x === 'string' || typeof y === 'string') {
+            return 'invalid char';
+
+        } else if(y === 0) {
             return 'not possible';
         } else {
             return x / y;
@@ -19,7 +30,11 @@ class Calculator {
     };
 
     mult(x,y) {
-        return x * y;
+        if(typeof x === 'string' || typeof y === 'string') {
+            return 'invalid char';
+        } else {
+            return x * y;
+        };    
     };
 }
 

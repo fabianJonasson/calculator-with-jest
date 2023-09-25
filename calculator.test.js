@@ -37,3 +37,10 @@ test('multiplikation av 3 och 2 ska bli 6', () => {
     expect(calc.mult(3,2)).toBe(6);
 });
 
+// Beräkningar måste ske mellan två nummer
+test('beräkningar måste göras med två nummer', () => {
+    expect(calc.add(1,"text")).toBe('invalid char');
+    expect(calc.sub(10,"text")).toBe('invalid char');
+    expect(calc.div(10,"text")).toBe('invalid char');
+    expect(calc.mult(3,"text")).toBe('invalid char');
+});
