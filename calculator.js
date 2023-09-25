@@ -11,7 +11,11 @@ class Calculator {
     };
 
     div(x,y) {
-        return x / y;
+        if(y===0) {
+            return 'not possible';
+        } else {
+            return x / y;
+        };
     };
 
     mult(x,y) {
